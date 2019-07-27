@@ -1,23 +1,26 @@
 package com.lastminute.salestaxes.model;
 
-import com.lastminute.salestaxes.model.types.Modifier;
-import lombok.Data;
+import com.lastminute.salestaxes.util.types.Modifier;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
 public class Tax implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private BigInteger id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(name = "TAX_AMOUNT")
     private BigDecimal taxAmount;
@@ -34,7 +37,4 @@ public class Tax implements Serializable {
 
     @Column(name = "ACTIVE")
     private Boolean active;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Category category;
 }

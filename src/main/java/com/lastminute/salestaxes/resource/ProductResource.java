@@ -9,9 +9,7 @@ public class ProductResource implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String quantity;
+    private int quantity = 1; //out of scope
     private String description;
     private String price;
-
-
 }

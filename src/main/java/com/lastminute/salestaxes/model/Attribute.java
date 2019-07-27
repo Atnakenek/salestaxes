@@ -1,23 +1,25 @@
 package com.lastminute.salestaxes.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name = "ATTRIBUTE")
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode(of = {"color", "size", "imported"})
 public class Attribute implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private BigInteger id;
+    private Integer id;
 
     @Column(name = "COLOR")
     private String color;
@@ -28,10 +30,9 @@ public class Attribute implements Serializable {
     @Column(name = "IMPORTED")
     private Boolean imported;
 
-    @OneToMany
-    private List<AttributeTax> taxEntities;
+    @OneToMany(mappedBy = "attribute")
+    private List<AttributeTax> taxes;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "attributes")
     private Set<Product> products;
-
 }
