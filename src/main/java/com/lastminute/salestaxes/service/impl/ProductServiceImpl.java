@@ -6,7 +6,6 @@ import com.lastminute.salestaxes.model.*;
 import com.lastminute.salestaxes.repository.ProductRepository;
 import com.lastminute.salestaxes.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.IterableUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +28,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductDTO> retrieveProducts(List<Integer> products) {
-        List<Product> productList = IterableUtils.toList(productRepository.findAllById(products));
+        Iterable<Product> productList = productRepository.findAllById(products);
         List<ProductDTO> productsDtoList = new LinkedList<>();
         for (Product product : productList) {
             BigDecimal price = retrieveCurrentPrice(product.getPricing());
