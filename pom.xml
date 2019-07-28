@@ -91,7 +91,7 @@
     </dependencies>
     <scm>
         <connection>scm:git:https://github.com/Atnakenek/salestaxes.git</connection>
-        <url>https://github.com/Atnakenek/salestaxes.git</url>
+        <url>scm:git:https://github.com/Atnakenek/salestaxes.git</url>
         <developerConnection>scm:git:https://github.com/Atnakenek/salestaxes.git</developerConnection>
     </scm>
     <build>
