@@ -90,8 +90,9 @@
         </dependency>
     </dependencies>
     <scm>
-        <connection>scm:git:git@github.com/Atnakenek/salestaxes.git</connection>
-        <url>scm:git:git@github.com/Atnakenek/salestaxes.git</url>
+        <connection>scm:git:https://github.com/Atnakenek/salestaxes.git</connection>
+        <url>https://github.com/Atnakenek/salestaxes.git</url>
+        <developerConnection>scm:git:https://github.com/Atnakenek/salestaxes.git</developerConnection>
     </scm>
     <build>
         <plugins>
