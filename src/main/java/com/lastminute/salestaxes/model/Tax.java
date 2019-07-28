@@ -1,5 +1,7 @@
 package com.lastminute.salestaxes.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.lastminute.salestaxes.util.types.Modifier;
 import lombok.*;
 
@@ -14,6 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @EqualsAndHashCode
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id", scope = Tax.class)
 public class Tax implements Serializable {
 
     private static final long serialVersionUID = 1L;

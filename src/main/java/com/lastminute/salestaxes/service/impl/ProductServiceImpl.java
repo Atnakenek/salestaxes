@@ -24,7 +24,6 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
-
     @Autowired
     ProductMapper productMapper;
 
@@ -37,7 +36,6 @@ public class ProductServiceImpl implements ProductService {
             List<Tax> taxes = retrieveTaxes(price, product.getCategory(), product.getAttributes());
             productsDtoList.add(productMapper.toProductDTO(product, price, taxes));
         }
-        //TODO logica per settare le tasse arrotondate sull'oggetto, il totale, e il totale tasse (da arrotondare solo dopo)
         return productsDtoList;
     }
 

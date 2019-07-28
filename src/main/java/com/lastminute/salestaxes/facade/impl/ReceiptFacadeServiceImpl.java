@@ -29,7 +29,6 @@ public class ReceiptFacadeServiceImpl implements ReceiptFacadeService {
 
     @Autowired
     private ProductService productService;
-
     @Autowired
     Map<String, TaxCalculatorStrategy> taxCalculator;
 

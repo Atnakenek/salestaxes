@@ -1,5 +1,7 @@
 package com.lastminute.salestaxes.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
@@ -14,6 +16,7 @@ import java.util.Set;
 @Getter
 @Setter
 @EqualsAndHashCode(of = {"color", "size", "imported"})
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id", scope = Attribute.class)
 public class Attribute implements Serializable {
 
     private static final long serialVersionUID = 1L;

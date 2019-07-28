@@ -24,7 +24,6 @@ public class OrderController {
 
     @Autowired
     private ReceiptFacadeService receiptFacadeService;
-
     @Autowired
     private ReceiptAssembler receiptAssembler;
 

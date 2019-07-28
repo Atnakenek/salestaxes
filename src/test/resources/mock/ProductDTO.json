@@ -1,0 +1,1 @@
+{	"description": "imported bottle of perfumes",	"priceAmount": 27.99,	"taxList": [	{	"taxAmount": 10.0,	"modifier": "PERC"	},	{	"taxAmount": 5.0,	"modifier": "PERC"	}	],	"taxedPriceAmount": null,	"taxAmount": null 	}
