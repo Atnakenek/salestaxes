@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.lastminute</groupId>
     <artifactId>sales-taxes</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Sales Taxes</name>
     <description>lastminute sales taxes test</description>
@@ -92,7 +92,7 @@
         <connection>scm:git:https://github.com/Atnakenek/salestaxes.git</connection>
         <url>scm:git:https://github.com/Atnakenek/salestaxes.git</url>
         <developerConnection>scm:git:https://github.com/Atnakenek/salestaxes.git</developerConnection>
-      <tag>v1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
     <build>
         <plugins>
