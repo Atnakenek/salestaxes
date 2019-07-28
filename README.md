@@ -5,7 +5,7 @@ at a rate of 5%, with no exemptions.<br/>
 When I purchase items I receive a receipt which lists the name of all the items and their price
 (including tax), finishing with the total cost of the items, and the total amounts of sales taxes
 paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains
-(np/100 rounded up to the nearest 0.05) amount of sales tax.
+(np/100 rounded up to the nearest 0.05) amount of sales tax.<br/>
 
 It's a SpringBoot application.<br/>
 It exposes a REST endpoint on POST:
